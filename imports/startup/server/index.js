@@ -9,7 +9,7 @@ const typeDefs = `
 const resolvers = {
   Query: {
     hi() {
-      return 'Hola Juan Camilo te quiero mucho'
+      return 'Hola Juan Camilo vamos a crear Hypernova.Studio'
     }
   }
 }
