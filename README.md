@@ -23,3 +23,5 @@ En este paso se esta creando un ejemplo, la idea es poder realizar los querys de
 1. Conectar React to Apollo & Apollo Dev-tools
 
 npm install --save apollo-client-preset react-apollo graphql-tag
+
+1. Con esto solucione el tema que no puede actuar con map porque la info todavia no esta lista: if(data.loading) return null
