@@ -18,3 +18,6 @@ En este paso se esta creando un ejemplo, la idea es poder realizar los querys de
 > Se crea la const typeDefs para definir el tipo de elemento que esta esperando (String, fucntion, object, ...)
 > Se crea la const resolvers para definir la funcion que hara el query
 > Se crea la const schema y se adiciona a createApolloServer
+
+1. Conectar React to Apollo & Apollo Dev-tools
+npm install --save apollo-client-preset react-apollo graphql-tag
