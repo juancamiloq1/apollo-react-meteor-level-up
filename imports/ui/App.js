@@ -5,16 +5,17 @@ import { graphql } from 'react-apollo'
 
  
 const App = ({ data }) => {
-  if(data.loading) return null
+  console.log(data)
+  if(data.loading) return null // Con esta linea ayudamos para que map pueda funcionar
   return (
     <div>
       <h1>{data.hi}</h1>
       <ul>
-      {data.resolutions.map(resolution => (
-        <li key={resolution._id}>
-          {resolution.name}
-        </li>
-      ))}
+        {data.resolutions.map(resolution => (
+          <li key={resolution._id}>
+            {resolution.name}
+          </li>
+        ))}
       </ul>
     </div>
   )
