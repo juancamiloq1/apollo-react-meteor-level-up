@@ -19,8 +19,7 @@ const testResolvers = {
     hi() {
       return "Hola desde Hi()"
     }
-  },
-  ...ResolutionsResolvers
+  }
 }
 
 const resolvers = merge(testResolvers, ResolutionsResolvers)
