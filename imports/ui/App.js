@@ -6,14 +6,13 @@ import ResolutionForm from './ResolutionForm'
 
 
  
-const App = ({ data }) => {
-  if(data.loading) return null // Con esta linea ayudamos para que map pueda funcionar
+const App = ({ loading, resolutions }) => {
+  if(loading) return null // Con esta linea ayudamos para que map pueda funcionar
   return (
     <div>
-      <h1>{data.hi}</h1>
-      <ResolutionForm refetch={data.refetch} />
+      <ResolutionForm />
       <ul>
-        {data.resolutions.map(resolution => (
+        {resolutions.map(resolution => (
           <li key={resolution._id}>
             {resolution.name}
           </li>
@@ -23,8 +22,8 @@ const App = ({ data }) => {
   )
 }
 
-const hiQuery = gql`
-  {
+const resolutionsQuery = gql`
+  query Resolutions {
     hi
     resolutions {
       _id
@@ -33,4 +32,6 @@ const hiQuery = gql`
   }
 `
 
-export default graphql(hiQuery)(App)
+export default graphql(resolutionsQuery,{
+  props: ({data}) => ({ ...data })
+})(App)
