@@ -7,12 +7,11 @@ import ResolutionForm from './ResolutionForm'
 
  
 const App = ({ data }) => {
-  console.log(data)
   if(data.loading) return null // Con esta linea ayudamos para que map pueda funcionar
   return (
     <div>
       <h1>{data.hi}</h1>
-      <ResolutionForm />
+      <ResolutionForm refetch={data.refetch} />
       <ul>
         {data.resolutions.map(resolution => (
           <li key={resolution._id}>
